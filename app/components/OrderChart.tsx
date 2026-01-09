@@ -22,23 +22,23 @@ const OrderChart = () => {
   };
 
   return (
-    <div className="w-full p-6">
+    <div className="w-full p-0">
       <div className="mb-6 flex items-start justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-slate-800">Order</h2>
+          <h2 className="text-base font-semibold text-slate-800">Order</h2>
           <div className="mt-2 flex items-baseline gap-2">
-            <span className="text-3xl font-bold text-slate-900">2.568</span>
+            <span className="text-2xl font-bold text-slate-900">2.568</span>
           </div>
-          <div className="mt-1 flex items-center gap-1 text-sm">
+          <div className="mt-1 flex items-center gap-1 text-[11px]">
             <span className="flex items-center font-medium text-red-500">
               <ArrowDown size={14} className="mr-0.5" />
               2.1%
             </span>
             <span className="text-slate-400">vs last week</span>
           </div>
-          <p className="mt-4 text-xs text-slate-400">Sales from 1-6 Dec, 2020</p>
+          <p className="mt-4 text-[11px] text-slate-400">Sales from 1-6 Dec, 2020</p>
         </div>
-        <button className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-indigo-500 hover:bg-slate-50">
+        <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-indigo-500 hover:bg-slate-50">
           View Report
         </button>
       </div>
@@ -66,27 +66,26 @@ const OrderChart = () => {
                  cursor={{ stroke: colors.primary, strokeWidth: 1 }}
             />
             
-            {/* Area 1 */}
+            {/* Area for last Week (Background/Comparison Line) */}
             <Area 
                 type="linear" 
                 dataKey="lastWeek" 
-                stroke={activeRange === 'lastWeek' ? colors.primary : colors.secondary} 
-                fillOpacity={activeRange === 'lastWeek' ? 1 : 0} 
-                fill="url(#colorArea)"
-                strokeWidth={1.5}
-                strokeOpacity={1}
+                stroke="#E2E8F0" 
+                fillOpacity={0} 
+                strokeWidth={2}
+                dot={false}
                 animationDuration={500}
             />
 
-            {/* Area 2 */}
+            {/* Area for last 6 Days (Active/Primary Line) */}
             <Area 
                 type="linear" 
                 dataKey="last6Days" 
-                stroke={activeRange === 'last6Days' ? colors.primary : colors.secondary} 
-                fillOpacity={activeRange === 'last6Days' ? 1 : 0}
+                stroke={colors.primary} 
+                fillOpacity={0.1}
                 fill="url(#colorArea)" 
-                strokeWidth={1.5}
-                strokeOpacity={1}
+                strokeWidth={2}
+                dot={false}
                 animationDuration={500}
             />
           </AreaChart>

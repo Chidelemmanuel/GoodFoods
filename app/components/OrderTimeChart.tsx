@@ -14,10 +14,10 @@ const OrderTimeChart = () => {
     <div className="w-full">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-slate-800">Order Time</h2>
-          <p className="mt-1 text-xs text-slate-400">From 1-6 Dec, 2020</p>
+          <h2 className="text-base font-semibold text-slate-800">Order Time</h2>
+          <p className="mt-1 text-[11px] text-slate-400">From 1-6 Dec, 2020</p>
         </div>
-        <button className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-indigo-500 hover:bg-slate-50">
+        <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-indigo-500 hover:bg-slate-50">
           View Report
         </button>
       </div>
@@ -45,9 +45,9 @@ const OrderTimeChart = () => {
         
         {/* Floating Card Overlay - Hidden on small mobile */}
         <div className="absolute top-1/2 right-4 md:right-0 translate-y-[-50%] rounded-xl bg-white p-3 md:p-4 text-slate-800 shadow-xl border border-slate-100 hidden sm:block">
-            <h4 className="text-[10px] md:text-xs font-semibold text-slate-800">Afternoon</h4>
+            <h4 className="text-[10px] md:text-[11px] font-semibold text-slate-800">Afternoon</h4>
             <p className="text-[10px] md:text-xs text-slate-400 mb-0.5 md:mb-1">1pm - 4pm</p>
-            <p className="text-sm md:text-lg font-bold text-indigo-900">1.890 orders</p>
+            <p className="text-sm md:text-base font-bold text-indigo-900">1.890 orders</p>
             <div className="absolute -left-1.5 top-1/2 -mt-1.5 h-3 w-3 -rotate-45 transform bg-white border-l border-t border-slate-100 hidden md:block"></div>
         </div>
       </div>

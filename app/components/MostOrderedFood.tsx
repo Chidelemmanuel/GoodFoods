@@ -12,7 +12,7 @@ const foods = [
 
 const MostOrderedFood = () => {
     return (
-        <div className="p-6 h-full overflow-hidden">
+        <div className="p-0 h-full overflow-hidden">
              <div className="mb-6">
                 <h3 className="text-lg font-semibold text-slate-800">Most Ordered Food</h3>
                 <p className="mt-1 text-xs text-slate-400">Adipiscing elit, sed do eiusmod tempor</p>
@@ -21,22 +21,22 @@ const MostOrderedFood = () => {
             <div className="flex flex-col">
                 {foods.map((food, index) => (
                     <React.Fragment key={index}>
-                        <div className="flex items-center justify-between group cursor-pointer py-4 transition-colors">
+                        <div className="flex items-center justify-between group cursor-pointer py-3 transition-colors">
                             <div className="flex items-center gap-4">
-                                <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                                <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden">
                                     <Image
                                         src={food.image}
                                         alt={food.name}
                                         fill
-                                        className="object-cover scale-150 mix-blend-multiply"
+                                        className="object-contain mix-blend-multiply"
                                     />
                                 </div>
-                                <span className="text-sm font-semibold text-slate-700">{food.name}</span>
+                                <span className="text-sm font-medium text-slate-700">{food.name}</span>
                             </div>
-                            <span className="text-xs font-medium text-slate-400">{food.price}</span>
+                            <span className="text-[11px] font-medium text-slate-400">{food.price}</span>
                         </div>
                         {index < foods.length - 1 && (
-                            <div className="h-px w-full bg-slate-100"></div>
+                            <div className="h-px w-full bg-slate-50"></div>
                         )}
                     </React.Fragment>
                 ))}
