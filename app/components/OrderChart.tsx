@@ -66,7 +66,6 @@ const OrderChart = () => {
                  cursor={{ stroke: colors.primary, strokeWidth: 1 }}
             />
             
-            {/* Area for last Week (Background/Comparison Line) */}
             <Area 
                 type="linear" 
                 dataKey="lastWeek" 
@@ -77,7 +76,6 @@ const OrderChart = () => {
                 animationDuration={500}
             />
 
-            {/* Area for last 6 Days (Active/Primary Line) */}
             <Area 
                 type="linear" 
                 dataKey="last6Days" 

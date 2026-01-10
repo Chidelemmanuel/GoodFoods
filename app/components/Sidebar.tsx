@@ -55,7 +55,6 @@ const Sidebar = ({ activeItem, onNavItemClick, isOpen, onClose }: SidebarProps) 
 
   return (
     <>
-      {/* Mobile Overlay */}
       <div 
         className={`fixed inset-0 z-40 bg-slate-900/50 backdrop-blur-sm transition-opacity lg:hidden ${
           isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
@@ -63,18 +62,16 @@ const Sidebar = ({ activeItem, onNavItemClick, isOpen, onClose }: SidebarProps) 
         onClick={onClose}
       />
 
-      {/* Sidebar Container */}
       <div className={`fixed inset-y-0 left-0 z-50 flex h-screen flex-col justify-between border-r border-slate-200 bg-[#F1F2F7] w-64 font-sans transition-transform lg:sticky lg:top-0 lg:translate-x-0 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
           <div className="flex flex-col gap-10">
-              {/* Logo Section matching Header Height */}
               <div className="flex h-20 items-center justify-between border-b border-slate-200 px-8">
                   <div className="flex items-center gap-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white shadow-lg shadow-indigo-200">
                           <Hexagon size={18} fill="currentColor" />
                       </div>
-                      <span className="text-sm font-black tracking-tighter text-indigo-900 border-b-2 border-indigo-600">GOODFOOD</span>
+                      <span className="text-base font-black tracking-tighter text-indigo-900 uppercase">GOODFOOD</span>
                   </div>
                   <button onClick={onClose} className="text-slate-400 lg:hidden">
                     <X size={20} />
@@ -82,7 +79,6 @@ const Sidebar = ({ activeItem, onNavItemClick, isOpen, onClose }: SidebarProps) 
               </div>
 
               <div className="flex flex-col gap-8 p-6 pt-0">
-                  {/* Menu Section */}
                   <div className="flex flex-col gap-2">
                       <h3 className="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Menu</h3>
                       <nav className="flex flex-col gap-1.5">
@@ -90,7 +86,6 @@ const Sidebar = ({ activeItem, onNavItemClick, isOpen, onClose }: SidebarProps) 
                       </nav>
                   </div>
 
-                  {/* Others Section */}
                   <div className="flex flex-col gap-2">
                       <h3 className="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Others</h3>
                       <nav className="flex flex-col gap-1.5">

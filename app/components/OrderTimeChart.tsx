@@ -43,7 +43,6 @@ const OrderTimeChart = () => {
           </PieChart>
         </ResponsiveContainer>
         
-        {/* Floating Card Overlay - Hidden on small mobile */}
         <div className="absolute top-1/2 right-4 md:right-0 translate-y-[-50%] rounded-xl bg-white p-3 md:p-4 text-slate-800 shadow-xl border border-slate-100 hidden sm:block">
             <h4 className="text-[10px] md:text-[11px] font-semibold text-slate-800">Afternoon</h4>
             <p className="text-[10px] md:text-xs text-slate-400 mb-0.5 md:mb-1">1pm - 4pm</p>

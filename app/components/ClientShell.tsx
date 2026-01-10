@@ -14,7 +14,7 @@ export default function ClientShell({ children }: { children: React.ReactNode })
         activeItem={activeItem} 
         onNavItemClick={(item) => {
           setActiveItem(item);
-          setIsSidebarOpen(false); // Close sidebar on mobile after clicking
+          setIsSidebarOpen(false);
         }} 
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}

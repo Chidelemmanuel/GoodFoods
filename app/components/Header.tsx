@@ -18,7 +18,6 @@ const Header = ({ onMenuClick }: HeaderProps) => {
   return (
     <header className="flex h-20 flex-shrink-0 items-center justify-between bg-white px-4 md:px-8 border-b border-slate-200 z-10">
       <div className="flex items-center gap-4 flex-1">
-        {/* Hamburger Menu - Mobile Only */}
         <button 
           onClick={onMenuClick}
           className="lg:hidden p-2 -ml-2 text-slate-500 hover:bg-slate-50 rounded-lg transition-colors"
@@ -26,7 +25,6 @@ const Header = ({ onMenuClick }: HeaderProps) => {
           <Menu size={24} />
         </button>
 
-        {/* Search Bar */}
         <div className="relative w-full max-w-[600px]">
           <div className="flex items-center rounded-xl bg-[#F1F2F7] px-4 py-2">
             <input 
@@ -39,9 +37,7 @@ const Header = ({ onMenuClick }: HeaderProps) => {
         </div>
       </div>
 
-      {/* Right Section */}
       <div className="flex items-center gap-4 md:gap-8 ml-4">
-        {/* Profile Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="flex items-center gap-2 md:gap-3 cursor-pointer outline-none hover:bg-slate-50 p-1 rounded-lg transition-colors">
@@ -71,7 +67,6 @@ const Header = ({ onMenuClick }: HeaderProps) => {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* Notification Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="relative cursor-pointer flex-shrink-0 p-2 hover:bg-[#F1F2F7] rounded-lg transition-colors outline-none">
