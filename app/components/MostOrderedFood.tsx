@@ -60,20 +60,20 @@ export function MostOrderedFood() {
                         <Image
                             src={item.image}
                             alt={item.name}
-                            width={80}
-                            height={80}
+                            width={60}
+                            height={60}
                             className="object-contain"
                         />
                     </div>
                 </div>
               </div>
 
-              <span className="font-bold text-sm text-slate-800 pb-5">
+              <span className="font-bold text-sm text-slate-800 pb-4">
                 {item.name}
               </span>
             </div>
 
-            <span className="text-[#A6ABC8] text-[11px] font-bold pb-5">
+            <span className="text-[#A6ABC8] text-[11px] font-bold pb-4">
               {item.price}
             </span>
           </div>
